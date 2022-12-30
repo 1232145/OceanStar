@@ -7,7 +7,7 @@ function NavBar() {
     return (
         <nav className='navbar'>
             <div className='nav-logo-container'>
-                <NavLink to="" className="nav-logo">
+                <NavLink to="/" className="nav-logo">
                     Logo
                 </NavLink>
             </div>
@@ -27,13 +27,13 @@ function NavBar() {
             }
             <div className='nav-icon-container'>
                 <NavLink
-                    to='login'
+                    to='/login'
                     className="nav-icon"
                 >
                     Login Icon
                 </NavLink>
                 <NavLink
-                    to='shopping-cart'
+                    to='/shopping-cart'
                     className="nav-icon"
                 >
                     Shopping Cart Icon

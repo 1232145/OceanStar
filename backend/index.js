@@ -21,10 +21,6 @@ const UserModel = mongoose.model('users', new Schema({
     password: String,
 }))
 
-const OrderModel = mongoose.model('orders', new Schema({
-    
-}))
-
 app.get('/', async (req, res, next) => {
     const data = await UserModel.find();
     res.json(data)

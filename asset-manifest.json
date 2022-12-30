@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/OceanStar/static/css/main.b54e2ed1.css",
+    "main.js": "/OceanStar/static/js/main.059f3ac6.js",
+    "static/js/787.0715570f.chunk.js": "/OceanStar/static/js/787.0715570f.chunk.js",
+    "index.html": "/OceanStar/index.html",
+    "main.b54e2ed1.css.map": "/OceanStar/static/css/main.b54e2ed1.css.map",
+    "main.059f3ac6.js.map": "/OceanStar/static/js/main.059f3ac6.js.map",
+    "787.0715570f.chunk.js.map": "/OceanStar/static/js/787.0715570f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b54e2ed1.css",
+    "static/js/main.059f3ac6.js"
+  ]
+}

@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/OceanStar/static/css/main.b54e2ed1.css",
-    "main.js": "/OceanStar/static/js/main.350e0f4d.js",
+    "main.css": "/OceanStar/static/css/main.edd49f79.css",
+    "main.js": "/OceanStar/static/js/main.3e50aa1b.js",
     "static/js/787.0715570f.chunk.js": "/OceanStar/static/js/787.0715570f.chunk.js",
     "index.html": "/OceanStar/index.html",
-    "main.b54e2ed1.css.map": "/OceanStar/static/css/main.b54e2ed1.css.map",
-    "main.350e0f4d.js.map": "/OceanStar/static/js/main.350e0f4d.js.map",
+    "main.edd49f79.css.map": "/OceanStar/static/css/main.edd49f79.css.map",
+    "main.3e50aa1b.js.map": "/OceanStar/static/js/main.3e50aa1b.js.map",
     "787.0715570f.chunk.js.map": "/OceanStar/static/js/787.0715570f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b54e2ed1.css",
-    "static/js/main.350e0f4d.js"
+    "static/css/main.edd49f79.css",
+    "static/js/main.3e50aa1b.js"
   ]
 }

@@ -4,6 +4,7 @@ import Contact from '../pages/contact';
 import About from '../pages/about';
 import Login from '../pages/login';
 import Cart from '../pages/cart';
+import Product from '../components/product';
 
 export const publicRoutes = [
     
@@ -13,6 +14,7 @@ export const publicRoutes = [
     { path:'/contact',component: Contact},
     { path:'/login',component: Login},
     { path:'/shopping-cart',component: Cart},
+    { path: '/products/:productId', component: Product}
 ]
 
 export const navRoutes = [

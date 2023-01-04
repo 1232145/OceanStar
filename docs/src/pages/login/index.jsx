@@ -33,8 +33,6 @@ function Login() {
     setIsPasswordVisible(!isPasswordVisble)
   }
 
-  //97.3, 34.7
-
   return (
     <div>
       <Header />

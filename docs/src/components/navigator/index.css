@@ -1,16 +1,13 @@
 .navbar {
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: antiquewhite;
-    height:75px;
-    width:100%;
+   
 }
 
 .nav-div {
-    background-color: aliceblue;
-    padding: 10px;
-    border: 1px solid black;
+    padding: 20px 10px;
     margin: 10px;
 }
 
@@ -19,17 +16,20 @@
 }
 
 .nav-logo-container {
-
-}
-
-.nav-logo {
-
+    background-image: url(../image/logo\ sdd.png);
+    width: 155px;
+    height: 83px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .nav-icon-container {
-
+    display: flex;
+    align-items: center;
 }
 
 .nav-icon {
-    
+    height: 35.5px;
+    width: 35.5px;
+    margin-right: 20px;
 }

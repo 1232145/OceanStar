@@ -9,9 +9,9 @@ import colors from '../color'
 function NavBar() {
     return (
         <nav className='navbar'>
-            <div className='nav-logo-container'>
-                <NavLink to="/" className="nav-logo"> </NavLink>
-            </div>
+                <NavLink to="/" className="nav-logo-container">
+                    <div className='nav-logo' />
+                </NavLink>
             {
                 navRoutes.map((item, index) => {
                     return (

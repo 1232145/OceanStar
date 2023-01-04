@@ -9,6 +9,7 @@ import { faEye } from '@fortawesome/free-solid-svg-icons'
 
 function Login() {
   const [isHover, setIsHover] = useState(false);
+  const [isPasswordVisble, setIsPasswordVisible] = useState(false)
   const [password, setPassword] = useState("");
 
   const buttonStyle = isHover ? {
@@ -28,23 +29,34 @@ function Login() {
     setPassword(e.currentTarget.value);
   }
 
+  const handlePasswordVisible = () => {
+    setIsPasswordVisible(!isPasswordVisble)
+  }
+
+  //97.3, 34.7
+
   return (
     <div>
       <Header />
       <div className='form-container'>
         <form style={{ color: colors.darkBlue }}>
-          <div>Đăng nhập</div>
+          <div className='header-login'>
+            <div className='header'>Đăng nhập</div>
+            <hr style={{ backgroundColor: colors.orange }}></hr>
+          </div>
           <div className='login'>
             <label>Tên đăng nhập / Email</label>
             <input type='email' />
-            <label>Mật khẩu</label>
+            <label className='password-label'>Mật khẩu</label>
             <div>
-              <input type='password' value={password}
+              <input type={isPasswordVisble ? 'text' : 'password'} value={password}
                 onChange={(e) => handlePasswordChange(e)}
               />
-              <i><FontAwesomeIcon icon={faEye} /></i>
+              <i onClick={handlePasswordVisible}><FontAwesomeIcon icon={faEye} /></i>
             </div>
-            <NavLink style={{ color: colors.darkBlue, fontWeight: 'bold' }} >Quên mật khẩu</NavLink>
+            <div className='forget-password-button'>
+              <NavLink style={{ color: colors.darkBlue, fontWeight: 'bold' }} >Quên mật khẩu</NavLink>
+            </div>
             <div className='submit-button'>
               <button style={buttonStyle}
                 onMouseEnter={handleChangeColor}

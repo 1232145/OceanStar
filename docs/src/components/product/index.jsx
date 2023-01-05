@@ -10,7 +10,7 @@ function Product() {
     const { productId } = useParams();
 
     useEffect(() => async () => {
-        const res = await axios.get("https://localhost:5000/products");
+        const res = await axios.get("http://localhost:5000/products");
         const products = res.data.filter(item => item.path === productId);
         setProduct(products[0]);
     }, [productId])

@@ -45,6 +45,10 @@ input[type="text"] {
     background-color: #f4f4f4;
 }
 
+input[type="password"], input[type="text"] {
+    padding-right: 50px;
+}
+
 .password-label {
     margin-top: 35px;
 }

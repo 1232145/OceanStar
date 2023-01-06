@@ -8,18 +8,10 @@ import image2 from '../../components/image/Image 2.png'
 import image3 from '../../components/image/Image 3.png'
 import image4 from '../../components/image/Image 4.png'
 
-const styleHeaderTitle = {
-    height: "453px",
-    width: "100%",
-    border: "1px solid #707070",
-    textAlign: "center",
-    fontSize: "20px",
-}
-
 const About = () => {
     return (
         <div>
-            <Header title='GIỚI THIỆU' style={styleHeaderTitle}/>
+            <Header title='GIỚI THIỆU'/>
             <div className="about-container">
                 <div className="about-content-container">
                     <p className="about-content-title">Giới thiệu chung</p>

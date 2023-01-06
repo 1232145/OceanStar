@@ -55,7 +55,7 @@ function Login() {
 
   return (
     <div>
-      <Header />
+      <Header style={{}}/>
       <div className='form-container'>
         <form style={{ color: colors.darkBlue }}>
           <div className='header-login'>

@@ -18,7 +18,7 @@ const Products = () => {
 
     return (
         <div>
-            <Header />
+            <Header title="Products"/>
             <h1>Products</h1>
             {
                 products.map((item, index) => {

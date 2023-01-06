@@ -4,9 +4,6 @@ import Header from "../../components/header"
 const Contact = () => {
     return (
         <div>
-            <Header title="Contact"/>
-            Contact
-            <Footer />
         </div>
     )
 }

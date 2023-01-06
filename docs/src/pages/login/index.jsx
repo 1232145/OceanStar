@@ -6,11 +6,16 @@ import colors from '../../components/color'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
+import axios from 'axios'
 
 function Login() {
   const [isHover, setIsHover] = useState(false);
   const [isPasswordVisble, setIsPasswordVisible] = useState(false)
-  const [password, setPassword] = useState("");
+  const [user, setUser] = useState({
+    email: "",
+    password: ""
+  });
+  const [response, setResponse] = useState("");
 
   const buttonStyle = isHover ? {
     backgroundColor: colors.darkBlue,
@@ -25,12 +30,27 @@ function Login() {
     setIsHover(!isHover)
   }
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.currentTarget.value);
+  const handleUserChange = (e, type) => {
+    if (type === "email") {
+      setUser({...user, email: e.currentTarget.value})
+    }
+    if (type === "password") {
+      setUser({...user, password: e.currentTarget.value});
+    }
   }
 
   const handlePasswordVisible = () => {
     setIsPasswordVisible(!isPasswordVisble)
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await axios.post('http://localhost:5000/login', user).then(res => setResponse(res.data));
+    setUser({
+      email: "",
+      password: ""
+    })
+    console.log(response)
   }
 
   return (
@@ -44,11 +64,13 @@ function Login() {
           </div>
           <div className='login'>
             <label>Tên đăng nhập / Email</label>
-            <input type='email' />
+            <input type='email'
+              value={user.email} 
+              onChange={(e) => handleUserChange(e, "email")}/>
             <label className='password-label'>Mật khẩu</label>
             <div>
-              <input type={isPasswordVisble ? 'text' : 'password'} value={password}
-                onChange={(e) => handlePasswordChange(e)}
+              <input type={isPasswordVisble ? 'text' : 'password'} value={user.password}
+                onChange={(e) => handleUserChange(e, "password")}
               />
               <i onClick={handlePasswordVisible}><FontAwesomeIcon icon={faEye} /></i>
             </div>
@@ -59,6 +81,7 @@ function Login() {
               <button style={buttonStyle}
                 onMouseEnter={handleChangeColor}
                 onMouseLeave={handleChangeColor}
+                onClick={(e) => handleSubmit(e)}
               >Đăng nhập
               </button>
             </div>

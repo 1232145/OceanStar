@@ -8,14 +8,19 @@ import image2 from '../../components/image/Image 2.png'
 import image3 from '../../components/image/Image 3.png'
 import image4 from '../../components/image/Image 4.png'
 
-
+const styleHeaderTitle = {
+    height: "453px",
+    width: "100%",
+    border: "1px solid #707070",
+    textAlign: "center",
+    fontSize: "20px",
+}
 
 const About = () => {
     return (
         <div>
-            <Header />
+            <Header title='GIỚI THIỆU' style={styleHeaderTitle}/>
             <div className="about-container">
-                <div className="about-image"> GIỚI THIỆU </div>
                 <div className="about-content-container">
                     <p className="about-content-title">Giới thiệu chung</p>
                     <p className="about-content">Công ty cổ phần Sao Đại Dương là nhà cung cấp chuyên nghiệp về các giải pháp, công nghệ, thiết bị hàn 

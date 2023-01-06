@@ -7,10 +7,16 @@ loginRouter.get('/', async (req, res, next) => {
     res.json(data)
 });
 
+//auth
 loginRouter.post('/', async (req, res) => {
-    const newData = new UserModel(req.body);
-    await newData.save();
-    res.json(newData)
+    // const newData = new UserModel(req.body);
+    // await newData.save();
+    const {email, password} = req.body;
+    const data = await UserModel.find({email: email, password: password});
+    console.log(data);
+    res.json({
+        msg: "Successfully login!",
+    })
 })
 
 loginRouter.delete('/:userId', async (req, res) => {

@@ -1,10 +1,24 @@
 import NavBar from '../navigator'
+import HeaderTitle from './headerTitle'
 import './index.css'
 
-const Header = () => {
+const Header = ({ image, title, style }) => {
     return (
-        <div className='header-container'>
-            <NavBar />
+        <div>
+            <div className='header-container'>
+                <NavBar />
+            </div>
+            <div>
+                <HeaderTitle
+                    {
+                    ...{
+                        image,
+                        title,
+                        style
+                    }
+                    }
+                />
+            </div>
         </div>
     )
 }

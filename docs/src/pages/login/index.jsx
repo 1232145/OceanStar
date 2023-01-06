@@ -1,21 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './index.css'
 import Footer from '../../components/footer'
 import Header from '../../components/header'
 import colors from '../../components/color'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye } from '@fortawesome/free-solid-svg-icons'
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios'
 
 function Login() {
   const [isHover, setIsHover] = useState(false);
-  const [isPasswordVisble, setIsPasswordVisible] = useState(false)
+  const [isPasswordVisble, setIsPasswordVisible] = useState(false);
+  const [isUser, setIsUser] = useState(0);
   const [user, setUser] = useState({
     email: "",
     password: ""
   });
-  const [response, setResponse] = useState("");
+  const navigate = useNavigate();
 
   const buttonStyle = isHover ? {
     backgroundColor: colors.darkBlue,
@@ -44,14 +45,26 @@ function Login() {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    await axios.post('http://localhost:5000/login', user).then(res => setResponse(res.data));
-    setUser({
-      email: "",
-      password: ""
-    })
-    console.log(response)
+    try {
+      setUser(0);
+      e.preventDefault();
+      await axios.post('http://localhost:5000/login', user).then(res => setIsUser(res.data.user ? 1 : -1));
+      setUser({
+        email: "",
+        password: ""
+      })
+    } catch (err) {
+      console.log(err);
+    }
   }
+
+  useEffect(() => {
+    if (isUser > 0) {
+      navigate("/");
+    } else if (isUser < 0) {
+      alert("User not found!")
+    }
+  }, [isUser])
 
   return (
     <div>
@@ -72,7 +85,7 @@ function Login() {
               <input type={isPasswordVisble ? 'text' : 'password'} value={user.password}
                 onChange={(e) => handleUserChange(e, "password")}
               />
-              <i onClick={handlePasswordVisible}><FontAwesomeIcon icon={faEye} /></i>
+              <i onClick={handlePasswordVisible}><FontAwesomeIcon icon={isPasswordVisble ? faEyeSlash : faEye} /></i>
             </div>
             <div className='forget-password-button'>
               <NavLink style={{ color: colors.darkBlue, fontWeight: 'bold' }} >Quên mật khẩu</NavLink>

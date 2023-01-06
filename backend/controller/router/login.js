@@ -12,11 +12,13 @@ loginRouter.post('/', async (req, res) => {
     // const newData = new UserModel(req.body);
     // await newData.save();
     const {email, password} = req.body;
-    const data = await UserModel.find({email: email, password: password});
-    console.log(data);
-    res.json({
-        msg: "Successfully login!",
-    })
+    const data = await UserModel.find();
+    const user = data.filter(item => item.email === email && item.password === password)
+    if (user[0]) {
+        res.json({user: true})
+    } else {
+        res.json({user: false})
+    }
 })
 
 loginRouter.delete('/:userId', async (req, res) => {

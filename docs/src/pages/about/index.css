@@ -6,6 +6,13 @@
     color: #09264A;
 }
 
+.about-image{
+    height: 453px;
+    width: 100%;
+    border: 1px solid #707070;
+    text-align: center;
+}
+
 .about-content-container{
     margin-top: 105px;
     width: 900px;

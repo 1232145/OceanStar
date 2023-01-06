@@ -12,6 +12,7 @@ iframe{
 .about-container{
     position: relative;
     align-items: center;
+    margin-top: 125px;
 }
 
 .map-container{
@@ -29,7 +30,7 @@ iframe{
     align-items: center;
     margin-bottom: 45px;
     padding-bottom: 65px;
-    margin-top: 450px;
+    margin-top: 500px;
     width: 75%;
     z-index: 9;
     background-color: white;
@@ -65,6 +66,7 @@ td{
     justify-content: center;
     font-size: 20px;
     margin-bottom: 148px;
+    margin-top: 0 !important;
 }
 
 input[type="email"],

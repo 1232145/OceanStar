@@ -25,7 +25,7 @@ const Contact = () => {
     return (
         <div>
             <Header />
-            <div className="about-container">
+            <div className="contact-container">
                 <div className="map-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232.7261295391373!2d105.8761762046261!3d21.04796256759362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a97e2919cef5%3A0x253d5a6802f83e8d!2zMzcgxJAuIE5ndXnhu4VuIFPGoW4sIE5n4buNYyBMw6JtLCBMb25nIEJpw6puLCBIw6AgTuG7mWksIFZpZXRuYW0!5e0!3m2!1sen!2sus!4v1673045251877!5m2!1sen!2sus"></iframe>
                 </div>

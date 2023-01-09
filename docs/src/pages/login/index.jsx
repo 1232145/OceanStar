@@ -11,7 +11,7 @@ import axios from 'axios'
 function Login() {
   const [isHover, setIsHover] = useState(false);
   const [isPasswordVisble, setIsPasswordVisible] = useState(false);
-  const [isUser, setIsUser] = useState(0);
+  const [res, setRes] = useState({});
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -48,7 +48,7 @@ function Login() {
     try {
       setUser(0);
       e.preventDefault();
-      await axios.post('http://localhost:5000/login', user).then(res => setIsUser(res.data.user ? 1 : -1));
+      await axios.post('http://localhost:5000/login', user).then(res => setRes(res.data));
       setUser({
         email: "",
         password: ""
@@ -59,12 +59,12 @@ function Login() {
   }
 
   useEffect(() => {
-    if (isUser > 0) {
-      navigate("/");
-    } else if (isUser < 0) {
-      alert("User not found!")
-    }
-  }, [isUser])
+   if (res?.token) {
+    navigate('/')
+   } else if (res?.msg) {
+    alert(res.msg)
+   }
+  }, [res])
 
   return (
     <div>

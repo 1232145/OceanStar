@@ -1,6 +1,7 @@
 const express = require('express');
 const loginRouter = express.Router();
-const UserModel = require('../../model/usermodel')
+const UserModel = require('../../model/usermodel');
+const generateToken = require('../auth/generateToken');
 
 loginRouter.get('/', async (req, res, next) => {
     const data = await UserModel.find();
@@ -15,9 +16,13 @@ loginRouter.post('/', async (req, res) => {
     const data = await UserModel.find();
     const user = data.filter(item => item.email === email && item.password === password)
     if (user[0]) {
-        res.json({user: true})
+        const token = generateToken("dsada");
+        res.json({
+            token: token,
+            email: user[0].email,
+        })
     } else {
-        res.json({user: false})
+        res.json({msg: "Wrong username or password!"})
     }
 })
 

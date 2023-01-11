@@ -4,7 +4,7 @@ import Contact from '../pages/contact';
 import About from '../pages/about';
 import Login from '../pages/login';
 import Cart from '../pages/cart';
-import Product from '../components/product';
+import Product from '../components/product/productItem';
 
 export const publicRoutes = [
     

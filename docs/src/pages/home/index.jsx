@@ -1,5 +1,6 @@
 import Footer from '../../components/footer';
 import Header from '../../components/header'
+import ProductFrame from '../../components/product/productFrame';
 
 const Home = () => {
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Header title="Home"/>
             Home Page
+            <ProductFrame />
             <Footer />
         </div>
     )

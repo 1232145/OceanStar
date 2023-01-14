@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import { NavLink } from "react-router-dom";
+import colors from '../../color'
+import './index.css';
 
-function ListProducts() {
+function ListProducts({ displayItemMode, borderMode }) {
     const [products, setProducts] = useState([]);
 
     const getProducts = async () => {
@@ -14,18 +16,42 @@ function ListProducts() {
         getProducts();
     }, [])
 
+    const productTable = () => {
+        return (
+            <div className='table-container' style={borderMode && { borderRight: `solid 2px ${colors.darkGray}`, borderWidth: 'thin' }}>
+                <div className='table-header'>
+                    Danh mục sản phẩm
+                    <hr style={{ backgroundColor: colors.orange }} />
+                </div>
+                {
+                    products.map((item, index) => {
+                        return (
+                            <div key={index} className="table-list-name">
+                                <div className='table-list-item'>
+                                    <NavLink to={item.path}>
+                                        {item.name}
+                                    </NavLink>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        )
+    }
+
+    const productItems = () => {
+        return (
+            <div className='items-container'>
+                
+            </div>
+        )
+    }
+
     return (
         <div>
             {
-                products.map((item, index) => {
-                    return (
-                        <div key={index}>
-                            <NavLink to={item.path}>
-                                {item.name}
-                            </NavLink>
-                        </div>
-                    )
-                })
+                displayItemMode ? productItems() : productTable()
             }
         </div>
     )

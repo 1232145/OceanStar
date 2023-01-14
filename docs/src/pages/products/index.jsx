@@ -6,8 +6,7 @@ const Products = () => {
     return (
         <div>
             <Header title="Products"/>
-            <h1>Products</h1>
-            <ProductFrame />
+            <ProductFrame filterMode={true}/>
             <Footer />
         </div>
     )

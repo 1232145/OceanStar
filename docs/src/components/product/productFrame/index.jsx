@@ -1,11 +1,16 @@
 import React from 'react'
 import ListProducts from '../productList'
+import './index.css'
 
-function ProductFrame() {
+function ProductFrame({ borderMode, filterMode}) {
   return (
-    <div>
-        <h4>Product frame</h4>
-        <ListProducts />
+    <div className='product-frame'>
+      <div className='list-product'>
+        <ListProducts borderMode={borderMode}/>
+      </div>
+      <div className='list-display'>
+        <ListProducts displayItemMode={true}/>
+      </div>
     </div>
   )
 }

@@ -14,9 +14,9 @@ loginRouter.post('/', async (req, res) => {
     // await newData.save();
     const {email, password} = req.body;
     const data = await UserModel.find();
-    const user = data.filter(item => item.email === email && item.password === password)
+    const user = data.filter(item => item.email === email && item.password === password);
     if (user[0]) {
-        const token = generateToken("dsada");
+        const token = generateToken({email: user[0].email, password: user[0].password});
         res.json({
             token: token,
             email: user[0].email,

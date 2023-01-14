@@ -1,0 +1,13 @@
+.product-frame {
+    display: flex;
+    flex-direction: row;
+    padding-top: 148.5px;
+}
+
+.list-product {
+    width: 600px;
+}
+
+.list-display {
+    width: 1177px;
+}

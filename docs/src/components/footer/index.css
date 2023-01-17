@@ -41,6 +41,11 @@ li{
     padding-bottom: 12px;
 }
 
+li a {
+    text-decoration: none;
+    color: white;
+}
+
 .tagname{
     text-align: center;
     font-size: 15px;

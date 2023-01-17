@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 const mongoose = require('mongoose');
 
 const loginRouter = require('./controller/router/login');
-const products = require('./controller/productPage/products');
+const products = require('./controller/router/products');
 
 const server = 'mongodb+srv://ngohu01:ngoviduchuy123@cluster0.ygfxvzr.mongodb.net/Ocean_users?retryWrites=true&w=majority';
 

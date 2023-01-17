@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from "../../components/footer";
-import Header from "../../components/header";
+import Footer from "../../footer";
+import Header from "../../header";
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';

@@ -28,7 +28,7 @@ function ListProducts({ displayItemMode, borderMode, pathTo }) {
                         return (
                             <div key={index} className="table-list-name">
                                 <div className='table-list-item'>
-                                    <NavLink to={pathTo + item.path}>
+                                    <NavLink to={pathTo ? (pathTo + item.path): item.path}>
                                         {item.name}
                                     </NavLink>
                                 </div>

@@ -85,7 +85,7 @@ const Contact = () => {
                                 <textarea type='text' />
                             </div>
                         <div className='submit-button'>
-                            <button style={buttonStyle}
+                            <button className='submit-button-button' style={buttonStyle}
                                 onMouseEnter={handleChangeColor}
                                 onMouseLeave={handleChangeColor}>
                                     Gửi form

@@ -55,8 +55,6 @@ const Slider = () => {
         <div className="carousel-items"><img className="carousel-img" src={image1} alt="" /></div>
         <div className="carousel-items"><img className="carousel-img" src={image1} alt="" /></div>
         <div className="carousel-items"><img className="carousel-img" src={image1} alt="" /></div>
-        <div className="carousel-items"><img className="carousel-img" src={image1} alt="" /></div>
-        <div className="carousel-items"><img className="carousel-img" src={image1} alt="" /></div>
       </Carousel>
       )
 }

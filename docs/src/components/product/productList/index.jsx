@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import colors from '../../color'
 import './index.css';
 
-function ListProducts({ displayItemMode, borderMode }) {
+function ListProducts({ displayItemMode, borderMode, pathTo }) {
     const [products, setProducts] = useState([]);
 
     const getProducts = async () => {
@@ -28,7 +28,7 @@ function ListProducts({ displayItemMode, borderMode }) {
                         return (
                             <div key={index} className="table-list-name">
                                 <div className='table-list-item'>
-                                    <NavLink to={item.path}>
+                                    <NavLink to={pathTo + item.path}>
                                         {item.name}
                                     </NavLink>
                                 </div>

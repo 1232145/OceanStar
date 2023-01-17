@@ -48,7 +48,10 @@ function Login() {
     try {
       setUser(0);
       e.preventDefault();
-      await axios.post('http://localhost:5000/login', user).then(res => setRes(res.data));
+      await axios.post('http://localhost:5000/login', user).then(res => {
+        setRes(res.data);
+        localStorage.setItem("token", res.data.token);
+      });
       setUser({
         email: "",
         password: ""

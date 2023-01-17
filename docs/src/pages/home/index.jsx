@@ -9,7 +9,7 @@ const Home = () => {
         <div>
             <Header title="Home" />
             <div style={{backgroundColor: `${colors.lightGray}`, margin: '0px'}}>
-                <ProductFrame borderMode={true} />
+                <ProductFrame borderMode={true} pathTo="/products/"/>
             </div>
             <Footer />
         </div>

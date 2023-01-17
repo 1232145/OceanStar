@@ -15,7 +15,6 @@ export const publicRoutes = [
     { path:'/login',component: Login},
     { path:'/shopping-cart',component: Cart},
     { path: '/products/:productId', component: Product},
-    { path: '/:productId', component: Product},
 ]
 
 export const navRoutes = [

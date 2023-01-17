@@ -94,7 +94,7 @@ function Login() {
               <NavLink style={{ color: colors.darkBlue, fontWeight: 'bold' }} >Quên mật khẩu</NavLink>
             </div>
             <div className='submit-button'>
-              <button style={buttonStyle}
+              <button  className='submit-button-button' style={buttonStyle}
                 onMouseEnter={handleChangeColor}
                 onMouseLeave={handleChangeColor}
                 onClick={(e) => handleSubmit(e)}

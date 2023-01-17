@@ -63,7 +63,7 @@ input[type="password"], input[type="text"] {
     justify-content: center;
 }
 
-button {
+.submit-button-button {
     font-size: 20px;
     width: 260px;
     height: 70px;

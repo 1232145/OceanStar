@@ -1,15 +1,22 @@
 .carousel-container{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+    width: 100%;
+    margin-left:auto;
+    margin-right: auto;
 }
 .carousel-img{
-    width: 221px !important;
-    height: 221px !important;
+    width: 221px;
+    height: 221px;
+    margin-left: 40px;
 }
 
-.react-multiple-carousel__arrow::before{
-    color: #707070;
+li{
+    border-bottom: none;
 }
 
 button{
-    width: 70px !important;
+    width: 30px;
+    height: 30px;
 }

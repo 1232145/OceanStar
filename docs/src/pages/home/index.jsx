@@ -1,12 +1,14 @@
 import Footer from '../../components/footer';
-import Header from '../../components/header'
+import Header from '../../components/header';
+import Slider from '../../components/slide';
 
 const Home = () => {
 
     return (
         <div>
             <Header title="Home"/>
-            Home Page
+            <div>SẢN PHẨM NỔI BẬT</div>
+            <Slider></Slider>
             <Footer />
         </div>
     )

@@ -45,10 +45,10 @@ const About = () => {
                 <p className="about-partners-title">Đối tác</p>
                 <hr />
                 <div className="about-partners">
-                    <div className="about-partner-logo"><img src= {image1} alt="" /></div>
-                    <div className="about-partner-logo"><img src= {image2} alt="" /></div>
-                    <div className="about-partner-logo"><img src= {image3} alt="" /></div>
-                    <div className="about-partner-logo"><img src= {image4} alt="" /></div>
+                    <div className="about-partner-logo"><img className="about-partner-img" src= {image1} alt="" /></div>
+                    <div className="about-partner-logo"><img className="about-partner-img" src= {image2} alt="" /></div>
+                    <div className="about-partner-logo"><img className="about-partner-img" src= {image3} alt="" /></div>
+                    <div className="about-partner-logo"><img className="about-partner-img" src= {image4} alt="" /></div>
                 </div>
             </div>
             <Footer />

@@ -1,0 +1,15 @@
+.carousel-container{
+    text-align: center;
+}
+.carousel-img{
+    width: 221px !important;
+    height: 221px !important;
+}
+
+.react-multiple-carousel__arrow::before{
+    color: #707070;
+}
+
+button{
+    width: 70px !important;
+}
